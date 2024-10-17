@@ -1,0 +1,14 @@
+- ChatGPT
+
+Sass Basics
+    - A CSS preprocessor enabling dynamic styling.
+    - Supports nesting, partials, and imports.
+    - Notable differences: uses variables and offers cleaner syntax.
+    
+- Gemini
+
+Key Features of Sass
+    - Variables: Store reusable values.
+    - Nesting: Organize CSS rules hierarchically.
+    - Partials: Import smaller files into main stylesheets.
+    - Mixins: Create reusable blocks of code.

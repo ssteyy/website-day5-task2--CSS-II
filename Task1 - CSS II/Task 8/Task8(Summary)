@@ -1,0 +1,14 @@
+- ChatGPT
+
+Theming in CSS
+    - Customizes styles for different visual presentations (e.g., light/dark themes).
+    - Implemented with Sass variables and conditional classes.
+    - Example: Theme switcher with Sass styles and JavaScript functionality.
+    
+- Gemini
+
+Theming in CSS: A Guide
+    - Theming: Allows multiple visual styles based on user preferences.
+Implementing Theming with Sass:
+    - Use variables for theme colors.
+    - Create a theme switcher with Sass and JavaScript.

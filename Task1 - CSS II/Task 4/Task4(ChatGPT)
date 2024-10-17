@@ -1,0 +1,142 @@
+### Using Variables and Functions in Sass
+
+Sass allows developers to define variables and functions, which help maintain consistency across styles and enable dynamic styling capabilities.
+
+#### Declaring Variables
+
+Variables in Sass are declared using the dollar sign (`$`) followed by the variable name. They can hold values like colors, fonts, and measurements, allowing for easy reuse throughout the stylesheet.
+
+**Example:**
+```scss
+$primary-color: #3498db;
+$font-stack: Arial, sans-serif;
+$base-font-size: 16px;
+```
+
+#### Using Functions
+
+Sass also supports custom functions, which are blocks of code that return a value. Functions can perform calculations or manipulate values.
+
+**Example of a Function:**
+```scss
+@function calculate-rem($pixels) {
+  @return $pixels / $base-font-size * 1rem;
+}
+```
+
+#### Example: Variables and Functions in Use
+
+Here's an example of how to declare variables and a function in Sass and use them to maintain consistency in styles:
+
+```scss
+// styles.scss
+$primary-color: #3498db;
+$font-stack: Arial, sans-serif;
+$base-font-size: 16px;
+
+@function calculate-rem($pixels) {
+  @return $pixels / $base-font-size * 1rem;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: calculate-rem(16px);
+  color: $primary-color;
+
+  h1 {
+    font-size: calculate-rem(32px);
+    color: darken($primary-color, 10%);
+  }
+
+  p {
+    font-size: calculate-rem(14px);
+    color: darken($primary-color, 20%);
+  }
+}
+```
+
+### Compiled CSS Output
+
+The resulting CSS after compilation would look like this:
+
+```css
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem; /* Equivalent to 16px */
+  color: #3498db; /* Value of $primary-color */
+}
+
+body h1 {
+  font-size: 2rem; /* Equivalent to 32px */
+  color: #2980b9; /* Darkened version of $primary-color */
+}
+
+body p {
+  font-size: 0.875rem; /* Equivalent to 14px */
+  color: #2468a0; /* Darkened version of $primary-color */
+}
+```
+
+### Concept of Inheritance in Sass
+
+Inheritance in Sass allows one selector to inherit styles from another. This is achieved through the `@extend` directive, which helps avoid duplication and keep styles DRY (Don't Repeat Yourself).
+
+#### Example of Inheritance
+
+```scss
+// styles.scss
+%button-style {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: $font-stack;
+  cursor: pointer;
+}
+
+.btn-primary {
+  @extend %button-style; /* Inherit button styles */
+  background-color: $primary-color;
+  color: white;
+}
+
+.btn-secondary {
+  @extend %button-style; /* Inherit button styles */
+  background-color: gray;
+  color: black;
+}
+```
+
+### Compiled CSS Output for Inheritance
+
+The resulting CSS after compilation would look like this:
+
+```css
+/* styles.css */
+.btn-primary,
+.btn-secondary {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3498db; /* Value of $primary-color */
+  color: white;
+}
+
+.btn-secondary {
+  background-color: gray;
+  color: black;
+}
+```
+
+### Summary
+
+- **Variables** in Sass allow for the storage and reuse of values, enhancing consistency across styles.
+- **Functions** enable dynamic value calculations, promoting flexible styling.
+- **Inheritance** through the `@extend` directive simplifies style management by allowing selectors to share styles without duplicating code. 
+
+These features make Sass a powerful tool for writing maintainable, organized, and scalable stylesheets.

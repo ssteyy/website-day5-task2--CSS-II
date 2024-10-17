@@ -1,0 +1,15 @@
+- ChatGPT
+
+Variables, Functions, and Inheritance in Sass
+    - Variables: Store reusable values (e.g., colors).
+    - Functions: Perform operations on values (e.g., darken()).
+    - Inheritance: Use @extend to inherit styles from other classes.
+    
+- Gemini
+
+Variables and Functions in Sass
+    - Variables: Store values for consistency.
+    - Functions: Perform calculations and manipulate values.
+Inheritance in Sass
+    - Allows creation of base styles and extending them for specific styles.
+    - Reduces redundancy and manages complex stylesheets efficiently.

@@ -1,0 +1,72 @@
+## Variables and Functions in Sass
+
+**Variables** in Sass allow you to store values that can be reused throughout your stylesheet. This helps maintain consistency and makes it easier to update styles in multiple places.
+
+**Functions** in Sass are reusable blocks of code that can take arguments and return a value. They can be used to perform calculations, manipulate colors, or create custom styles.
+
+### Example: Using Variables and Functions
+
+```scss
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-size: 16px;
+
+// Functions
+@function darken-color($color, $amount) {
+  @return darken($color, $amount * 10%);
+}
+
+// Usage
+.button {
+  background-color: $primary-color;
+  color: white;
+  font-size: $font-size;
+  padding: 10px 20px;
+  border: none;
+
+  &:hover {
+    background-color: darken-color($primary-color, 0.2);
+  }
+}
+```
+
+In this example:
+
+* The `$primary-color` and `$secondary-color` variables are used to define colors.
+* The `$font-size` variable is used to define the font size.
+* The `darken-color` function takes a color and an amount as arguments and returns a darker version of the color.
+* The `&:hover` rule uses the `darken-color` function to create a darker background color for the button when hovered.
+
+## Inheritance in Sass
+
+**Inheritance** in Sass allows you to create a base stylesheet and then extend it to create more specific styles. This helps reduce redundancy and makes it easier to manage complex stylesheets.
+
+### Example: Using Inheritance
+
+```scss
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+.primary-button {
+  @extend .button;
+  background-color: #ff4d4d;
+}
+
+.secondary-button {
+  @extend .button;
+  background-color: #333;
+}
+```
+
+In this example:
+
+* The `.button` class defines the base styles for all buttons.
+* The `.primary-button` and `.secondary-button` classes extend the `.button` class and add their own specific styles.
+* This allows you to create different button styles while still maintaining a common base.
+
+By using variables, functions, and inheritance, you can write more efficient, maintainable, and consistent Sass code.

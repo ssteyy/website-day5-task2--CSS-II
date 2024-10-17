@@ -1,0 +1,13 @@
+- ChatGPT
+
+CSS Compilation
+    - Converts Sass to standard CSS using a compiler.
+    - Steps: Write Sass, compile to CSS.
+    - Example: Demonstrates conversion from Sass to clean CSS.
+
+- Gemini
+
+CSS Compilation Process
+    - Parsing: Analyze source code.
+    - Evaluation: Resolve variables and apply mixins.
+    - Output Generation: Generate standard CSS.

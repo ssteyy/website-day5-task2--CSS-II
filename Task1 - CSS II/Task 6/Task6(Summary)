@@ -1,0 +1,12 @@
+- ChatGPT
+
+Components in CSS
+    - Reusable UI pieces that improve code organization.
+    - Example: A styled card component in Sass.
+    - Structure: Organized in a modular directory.
+    
+- Gemini
+
+Components in CSS: Building Blocks for Reusability
+    - CSS Components: Reusable code blocks for consistency and maintainability.
+    - Card Component Example: Uses Sass for modular design with nested selectors.
